@@ -8,22 +8,8 @@
 
     <div class="container-fluid py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <div class="card">
-                    <div class="card-header">
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-
-                            <span id="card_title">
-                                {{ __('{{modelTitle}}') }}
-                            </span>
-
-                             <div class="float-right">
-                                <a href="{{ route('{{modelRoute}}.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
-                                </a>
-                              </div>
-                        </div>
-                    </div>
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg sm:p-6 lg:p-8">
+                <div>
                     @if ($message = Session::get('success'))
                         <div class="alert alert-success m-4">
                             <p>{{ $message }}</p>
@@ -58,6 +44,20 @@
                                     @endforeach
                                 </tbody>
                             </table>
+                        </div>
+                    </div>
+                    <div class="card-header">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+
+                            <span id="card_title">
+                                {{ __('{{modelTitle}}') }}
+                            </span>
+
+                             <div class="float-right">
+                                <a href="{{ route('{{modelRoute}}.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                  {{ __('Create New') }}
+                                </a>
+                              </div>
                         </div>
                     </div>
                 </div>
